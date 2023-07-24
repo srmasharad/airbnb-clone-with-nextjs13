@@ -109,7 +109,13 @@ const ListingClient = ({
         <div className="mt-6 grid grid-cols-1 md:grid-cols-7 md:gap-10">
           <ListingInfo
             user={listing.user}
-            category={category}
+            category={
+              category as {
+                icon: React.ElementType;
+                label: string;
+                description: string;
+              }
+            }
             description={listing.description}
             roomCount={listing.roomCount}
             guestCount={listing.guestCount}
