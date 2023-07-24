@@ -1,20 +1,20 @@
-import './globals.css';
+import "./globals.css";
 
-import type { Metadata } from 'next';
-import { Nunito } from 'next/font/google';
+import type { Metadata } from "next";
+import { Nunito } from "next/font/google";
 
-import { getCurrentUser } from './actions/getCurrentUser';
-import Header from './components/header/Header';
-import LoginModal from './components/modals/LoginModal';
-import RegisterModal from './components/modals/RegisterModal';
-import RentModal from './components/modals/RentModal';
-import SearchModal from './components/modals/SearchModal';
-import ToasterProvider from './providers/ToasterProvider';
-import { SafeUser } from './types';
+import { getCurrentUser } from "./actions/getCurrentUser";
+import Header from "./components/header/Header";
+import LoginModal from "./components/modals/LoginModal";
+import RegisterModal from "./components/modals/RegisterModal";
+import RentModal from "./components/modals/RentModal";
+import SearchModal from "./components/modals/SearchModal";
+import ToasterProvider from "./providers/ToasterProvider";
+import { SafeUser } from "./types";
 
 export const metadata: Metadata = {
-  title: "Airbnb",
-  description: "Airbnb Clone",
+  title: "Airbnb Clone with NextJS 13",
+  description: "Airbnb clone with NextJS and MongoDB.",
 };
 
 const nunito = Nunito({

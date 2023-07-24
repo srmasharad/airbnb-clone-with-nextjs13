@@ -3,7 +3,7 @@ import getListingById from "app/actions/getListingById";
 import getReservations from "app/actions/getReservations";
 import Container from "app/components/Container";
 import EmptyState from "app/components/EmptyState";
-import { SafeUser } from "app/types";
+import { SafeListing, SafeUser } from "app/types";
 
 import ListingClient from "./ListingClient";
 
@@ -21,7 +21,7 @@ const ListingPage = async ({ params }: { params: IParams }) => {
   return (
     <Container>
       <ListingClient
-        listing={listing}
+        listing={listing as SafeListing & { user: SafeUser }}
         reservations={reservations}
         currentUser={currentUser as SafeUser}
       />

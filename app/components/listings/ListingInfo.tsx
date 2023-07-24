@@ -5,6 +5,7 @@ import { SafeUser } from "app/types";
 import dynamic from "next/dynamic";
 
 import Avatar from "../Avatar";
+import { CategoryItemProps } from "../CategoryItem";
 import Divider from "../Divider";
 import ListingCategory from "./ListingCategory";
 
@@ -14,13 +15,7 @@ const Map = dynamic(() => import("../Map"), {
 
 interface ListingInfoProps {
   user: SafeUser;
-  category:
-    | {
-        icon: React.ElementType;
-        label: string;
-        description: string;
-      }
-    | undefined;
+  category: CategoryItemProps | undefined;
   description: string;
   guestCount: number;
   roomCount: number;
@@ -63,7 +58,7 @@ const ListingInfo = ({
         <ListingCategory
           icon={category.icon}
           label={category.label}
-          description={category.description}
+          description={category.description as string}
         />
       )}
       <Divider />
